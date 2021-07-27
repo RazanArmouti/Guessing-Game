@@ -1,15 +1,19 @@
 'use strict';
-let jupiterName, coffee, tennis, shoeSize, twin;
+let jupiterName, coffee, tennis, shoeSize, twin,guessNo, guessNoCounter, guessCoffe, guessCofeeCounter, coffeArray, finalScore;
 let guestName= prompt('What is your name?');
 alert('Greeting '+guestName+' A very warm welcome to you! You are a wonderful person with a wonderful view of life. It is lovely to have you among us!');
 alert('Hey '+ guestName +'! We’re so excited you are a member of our game. We love all our members, and that includes you too! Enjoy & spread the love. We start the game!');
 document.write('<div id=\'imgDiv\'><img src=\'./img/welcome-message.jpg\' alt=\'Wlc Pic\'></div>');
 document.write('<div id=\'msgDiv\'><p><h2> Hey '+ guestName +'! We’re so excited you are a member of our game. We love all our members, and that includes you too! Enjoy & spread the love.</h2></p></div>');
 
+finalScore=0;
+
 jupiterName = prompt('Did you name one of Jupiter\'s moons? Yes/No').toLocaleLowerCase();
 switch (jupiterName ) {
 case 'no':
 case 'n':
+  finalScore++;
+  console.log(finalScore);
   //console.log("No, Correct answer");
   alert ('My name is also far from Jupiter');
   break;
@@ -29,6 +33,8 @@ case 'n':
   break;
 case 'yes':
 case 'y' :
+  finalScore++;
+  console.log(finalScore);
   //console.log("Yes, Correct answer");
   alert('Great, Coffee is my favorite drink');
   break;
@@ -43,6 +49,8 @@ case 'n':
   break;
 case 'yes':
 case 'y' :
+  finalScore++;
+  console.log(finalScore);
   //console.log("Yes, Correct answer");
   alert('Great, Tennis is one of my favorite sports too');
   break;
@@ -58,6 +66,8 @@ case 'n':
   break;
 case 'yes':
 case 'y' :
+  finalScore++;
+  console.log(finalScore);
   //console.log("Yes, Correct answer");
   alert('Great, The perfect size for women\'s shoes');
   break;
@@ -68,6 +78,8 @@ twin = prompt('Do you have a twin? Yes/No').toLocaleLowerCase();
 switch (twin){
 case 'no':
 case 'n':
+  finalScore++;
+  console.log(finalScore);
   //console.log("No, Correct answer");
   alert('Great, Twins are rare. You are unique as me');
   break;
@@ -78,4 +90,67 @@ case 'y' :
   break;
 }
 
+guessNo= prompt('Now kindly guess a number I have it and insert it in the box');
+guessNoCounter=1;
+while (Number(guessNo)!==7 && guessNoCounter<4)
+{
+  guessNoCounter++;
+  //alert(Number(guessNo));
+  if(Number(guessNo) < 7)
+  {
+    guessNo= prompt('Please try again, your number is too low');
+  }
+  else
+  {
+    guessNo= prompt('Please try again, your number is too high');
+  }
 
+}
+
+if(Number(guessNo)===7)
+{
+  finalScore++;
+  console.log(finalScore);
+  alert ('Congratulations! You guessed the right number ~ 7');
+}
+else
+{
+  alert ('Good luck, Unfortunately the right number is 7');
+}
+
+guessCoffe= prompt('Try to guess what my favorte hot coffe?').toLocaleLowerCase();
+guessCofeeCounter=1;
+coffeArray=['Black Coffee','Latte','Cappuccino','Americano','Cortado','Espresso'];
+
+while(guessCoffe!==coffeArray[0].toLocaleLowerCase() &&
+      guessCoffe!==coffeArray[1].toLocaleLowerCase() &&
+      guessCoffe!==coffeArray[2].toLocaleLowerCase() &&
+      guessCoffe!==coffeArray[3].toLocaleLowerCase() &&
+      guessCoffe!==coffeArray[4].toLocaleLowerCase() &&
+      guessCoffe!==coffeArray[5].toLocaleLowerCase() &&
+      guessCofeeCounter<6
+)
+{
+  guessCofeeCounter++;
+  guessCoffe= prompt('Please try again to guess what my favorte hot coffe?').toLocaleLowerCase();
+}
+
+if( guessCoffe === coffeArray[0].toLocaleLowerCase() ||
+    guessCoffe === coffeArray[1].toLocaleLowerCase() ||
+    guessCoffe === coffeArray[2].toLocaleLowerCase() ||
+    guessCoffe === coffeArray[3].toLocaleLowerCase() ||
+    guessCoffe === coffeArray[4].toLocaleLowerCase() ||
+    guessCoffe === coffeArray[5].toLocaleLowerCase()
+)
+{
+  finalScore++;
+  console.log(finalScore);
+  alert ('Congratulations! You guessed one type of my favorte hot coffe '+guessCoffe);
+}
+else
+{
+  alert (`Good luck, Unfortunately My favorte hot coffe list is ${coffeArray[0]}, ${coffeArray[1]}, ${coffeArray[2]}, ${coffeArray[3]}, ${coffeArray[4]}, ${coffeArray[5]}`);
+
+}
+console.log(finalScore);
+alert(`The total number of your correct answers is ${finalScore}`);

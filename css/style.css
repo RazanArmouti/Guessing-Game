@@ -9,6 +9,19 @@
 }
 img{
     height: 150px;
-    width: 150px;
+    width: 200px;
     align-items: center;
 }
+/*ol li{
+   display: inline;
+  
+}*/
+ul li{
+  
+    list-style-type:square;
+ 
+ }
+ body
+ {
+     background-color:tan;
+ }
