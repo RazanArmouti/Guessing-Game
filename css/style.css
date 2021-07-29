@@ -8,20 +8,66 @@
 
 }
 img{
-    height: 150px;
-    width: 200px;
+    height: 200px;
+    width: 600px;
     align-items: center;
+    
 }
-/*ol li{
-   display: inline;
-  
-}*/
+ul{
+    margin-bottom: 10px;
+}
+
 ul li{
   
     list-style-type:square;
  
  }
+ ol li{
+  
+    list-style-type:decimal;
+ 
+ }
  body
  {
-     background-color:tan;
+     background-color:cornsilk;
+     margin-left: 50px;
+     margin-top: 20px;
+     font-family: 'Times New Roman', Times, serif;
+     
+
+     
  }
+ h1{
+     font-size: large;
+     margin-bottom: 10px;
+     font-weight: bold;
+ }
+ 
+ main{
+   
+     top:20px;
+ }
+ #msgDiv #imgDiv #generalDiv{
+   
+  top: 100px ;
+ }
+ div{
+   margin-top: 60px;
+    bottom: 2px;
+ }
+h2{
+font-size: large;
+ color: maroon;
+font-weight: bold;
+
+
+}
+h3{
+    font-weight: bold;
+}
+p{
+    text-align: center;
+}
+ 
+     
+ 

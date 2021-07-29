@@ -8,4 +8,8 @@ About Me, with a guessing game
 4. added new js code for question 6 and 7 using for and while loops, if and switch statement 
 
 # modified the app.js file 28th of july,2021
-1. orgnize the code used functions feature 
+1. orgnized the code used functions feature 
+
+# modified the Style.css, app.js file 29th of july,2021
+1. added new styles
+2. delete the comments.
